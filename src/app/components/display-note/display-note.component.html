@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="container" *ngFor="let note of childArray">
+        <div (click)="updateNote(note)">
+            {{note.title}}
+        </div>
+        <div (click)="updateNote(note)">
+            {{note.description}}
+        </div>
+        <div class="icon-display">
+            <div style="width: 240px;" >
+                <app-icon [noteObject]="note"></app-icon>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="parent">
+
+        <div class="take" *ngIf="!show || show">
+            <div *ngIf="!show" (click)="showHide()" class="take-note">
+                <span >take a note</span>
+                <div class="note-icon">
+                    <img width="24px" height="24px" src="../../../assets/Icons/tickbox.svg" alt="">
+                    <img width="24px" height="24px" src="../../../assets/Icons/brush.svg" alt="">
+                    <img width="24px" height="24px" src="../../../assets/Icons/img.svg" alt="">
+
+                </div>
+
+            </div>
+            <div>
+                <input class="no-border" style="width: 80%;" *ngIf="show" [(ngModel)]="title" type="text"
+                    placeholder="Title">
+            </div>
+
+        </div>
+
+        <div *ngIf="show">
+            <div>
+
+                <input class="no-border" [(ngModel)]="description" placeholder="discription">
+
+            </div>
+            <div class="icon-button">
+
+                <div style="width: 60%;">
+                    <app-icon></app-icon>
+                </div>
+                <div>
+                    <button style="border: none;" (click)="addNote()">close</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

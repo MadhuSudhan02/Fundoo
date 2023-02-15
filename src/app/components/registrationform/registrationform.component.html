@@ -1,0 +1,96 @@
+<div class="parent-container">
+    <div class="container">
+        <div class="child-container">
+            <div class="sub-container-1">
+                <div class="image">
+                    <img width="80" height="40" src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" alt="">
+                </div>
+
+                <div class="headline">
+                    <div class="mat-display-4">Create your Google Account</div>
+                    <div class="mat-display-3">to continue to Gmail</div>
+                </div>
+                <form [formGroup]="registerForm" (ngSubmit)="register()">
+                    <div class="name">
+                        <mat-form-field appearance="outline">
+                            <mat-label>First name</mat-label>
+                            <input formControlName="firstName" matInput>
+                            <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                first name is required
+                            </mat-hint>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline">
+                            <mat-label>Last name</mat-label>
+                            <input formControlName="lastName" matInput>
+                            <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                last name is required
+                            </mat-hint>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="email">
+                        <mat-form-field appearance="outline">
+                            <mat-label>email</mat-label>
+                            <input formControlName="email" matInput>
+                            <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                email is required
+                            </mat-hint>
+                            <mat-hint color="primary">you can use letters , numbers &period .</mat-hint>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="password">
+                        <div class="password-box">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input formControlName="password" type="password" matInput>
+                                <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                    password is required
+                                </mat-hint>
+                            </mat-form-field>
+    
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirm</mat-label>
+                                <input formControlName="confirmPassword" type="password" matInput>
+                                <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                    password is required
+                                </mat-hint>
+                            </mat-form-field>
+
+                        </div>
+                        
+                        <div class="password-hint">
+                            <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+
+                        </div>
+                        <div class="checkbox">
+                            <mat-checkbox >
+                                Show password
+                            </mat-checkbox>
+
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <h2 routerLink="/Login">Sign in instead</h2>
+
+                        <button mat-raised-button type="submit" color="primary">Next</button>
+
+                    </div>
+                </form>
+
+            </div>
+            <div class="sub-container-2">
+                <img width="244" height="244" src="https://ssl.gstatic.com/accounts/signup/glif/account.svg" alt="">
+                <div class="mat-display-2">One account. All of Google working for you.</div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

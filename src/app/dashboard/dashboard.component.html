@@ -1,0 +1,53 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <div class="fundoo-icon">
+      <h1 class="example-app-name"><img class="nav-icon-tool" width="36px" height="36px" src="../../assets/Icons/keep.png"
+        alt=""> Fundoo</h1>
+    </div>
+    
+    <mat-form-field style="width: 700px; margin:30px 0px 10px 70px; border-radius: 16px;" appearance="outline">
+      <mat-label>Search</mat-label>
+      <input matInput />
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+<div class="icon-right">
+  <div class="icon-one">
+    <img width="24px" height="24px" src="../../assets/Icons/refresh.svg" alt="">
+    <img width="24px" height="24px" src="../../assets/Icons/twobox.svg" alt="">
+    <img width="24px" height="24px" src="../../assets/Icons/setting.svg" alt="">
+  </div>
+
+  <div class="icon-two">
+    <img width="24px" height="24px" src="../../assets/Icons/apps.svg" alt="">
+    <img width="24px" height="24px" src="../../assets/Icons/account.svg" alt="">
+  </div>
+</div>
+   
+  </mat-toolbar>
+
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list class="nav">
+        <a mat-list-item routerLink="."><img class="nav-icon" width="24px" height="24px"
+            src="../../assets/Icons/note.svg" alt=""> Notes</a>
+        <a mat-list-item routerLink="/home/remainder"><img class="nav-icon" width="24px" height="24px"
+            src="../../assets/Icons/reminder.svg" alt="">Reminder</a>
+        <a mat-list-item routerLink="/home/editlabel"><img class="nav-icon" width="24px" height="24px"
+            src="../../assets/Icons/editlabel.svg" alt="">Edit label</a>
+        <a mat-list-item routerLink="/home/archieve"><img class="nav-icon" width="24px" height="24px"
+            src="../../assets/Icons/systemupdate.svg" alt="">Archive</a>
+        <a mat-list-item routerLink="/home/bin"><img class="nav-icon" width="24px" height="24px"
+            src="../../assets/Icons/bin.svg" alt="">Bin</a>
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div>
+        <!-- child will appear here    -->
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,49 @@
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+
+   }
+.parent {
+    width: 600px;
+    height: fit-content;
+    border: 1px solid rgba(0,0,0,.2);;
+    // padding: 20px 20px 20px 20px;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 100;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+.icon-button {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+// ::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled ,
+// ::ng-deep .mat-form-field-outline
+//  {
+//     opacity: 0;
+//   }
+
+// ::ng-deep .mat-form-field-underline
+// {
+// display: none;
+// }
+.no-border {
+    margin-bottom: 10px ;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.take-note {
+    // background-color: pink;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.note-icon img {
+    margin-left: 20px;
+}

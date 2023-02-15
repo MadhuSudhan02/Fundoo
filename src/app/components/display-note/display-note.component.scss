@@ -1,0 +1,26 @@
+.container {
+    // background-color: pink;
+    width: 240px;
+    height: fit-content;
+    margin: 8px;
+    border-radius: 7px;
+    padding: 10px;
+    border: 1px solid rgba(0,0,0,.2); ; 
+    // border: 1px solid #8a8a8a ;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+
+}
+.parent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.icon-display {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    // background-color: aqua;
+    height: 60px;
+
+
+}

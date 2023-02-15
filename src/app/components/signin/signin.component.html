@@ -1,0 +1,56 @@
+<div class="parent-container">
+    <div class="container">
+        <div class="child-container">
+            <div class="img-header">
+                <div class="image">
+                    <img width="80" height="40" src="https://www.vectorlogo.zone/logos/google/google-ar21.svg" alt="">
+                </div>
+                <div class="headline">
+                    <div class="mat-display-4">Sign in</div>
+                    <div class="mat-display-2">to continue to Gmail</div>
+                </div>
+
+            </div>
+            <form [formGroup]="username" (ngSubmit)="login()">
+                <div class="email-password">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input formControlName="email" matInput>
+                        <mat-hint class="danger" *ngIf="username.get('email')!.touched && username.get('email')!.errors?.['required']">
+                            email is required
+                        </mat-hint>
+                    </mat-form-field>
+                    <div class="forgot">
+                        <h2 routerLink="/forgotpassword">forgot email? </h2>
+                    </div>
+
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input formControlName="password" type="password" matInput>
+                    
+                        <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="bottom-header">
+                    <div class="mat-display-3">Not your computer? Use Guest mode to sign in privately.</div>
+                    <div class="mat-display-1">Learn more</div>
+                </div>
+
+                <div class="bottom">
+                    <h2 routerLink="/userSignup">Create account</h2>
+
+                    <button mat-raised-button color="primary">Next</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+
+
+    </div>
+
+</div>
