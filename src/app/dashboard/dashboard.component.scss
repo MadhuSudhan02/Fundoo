@@ -52,8 +52,14 @@ margin: 12px;
 .icon-two img{
   margin: 12px;
   }
-  // .fundoo-icon{
-  //   margin: 10px;
+  .fundoo-icon{
+    display: flex;
+  flex-flow: row wrap;
+    // margin: 10px;
+    // border: 2px solid black;
+  }
+  // .nav-icon-tool{
+  //   margin-top: 10px;
   // }
 
   

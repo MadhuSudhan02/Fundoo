@@ -1,15 +1,25 @@
 <div class="mat-icon">
     <div class="img">
-        <img  width="16px" height="16px" src="../../../assets/Icons/Notification.svg" alt=" ">
+        <img width="16px" height="16px" src="../../../assets/Icons/Notification.svg" alt=" ">
     </div>
 
     <div class="img">
         <img width="16px" height="16px" src="../../../assets/Icons/person.svg" alt=" ">
     </div>
+    <div class="palete">
+        <div class="img">
+            <button mat-button [matMenuTriggerFor]="menu"><img width="16px" height="16px"
+                    src="../../../assets/Icons/pellete.svg" alt=" "></button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item class="round-button"></button>
+                <button mat-menu-item class="round-button"></button>
+                <button mat-menu-item class="round-button"></button>
+                <button mat-menu-item class="round-button"></button>
+                <button mat-menu-item class="round-button"></button>
+            </mat-menu>
+            <!-- <img width="16px" height="16px" src="../../../assets/Icons/pellete.svg" alt=" "> -->
 
-    <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/pellete.svg" alt=" ">
-
+        </div>
     </div>
 
     <div class="img">
@@ -23,7 +33,17 @@
     </div>
 
     <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/threedot.svg" alt=" ">
+        <button mat-button [matMenuTriggerFor]="menu"><img width="16px" height="16px"
+                src="../../../assets/Icons/threedot.svg" alt=" "></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Delete note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show tick boxes</button>
+            <button mat-menu-item>Copy to Google Docs</button>
+        </mat-menu>
+        <!-- <img width="16px" height="16px" src="../../../assets/Icons/threedot.svg" alt=" "> -->
 
     </div>
 

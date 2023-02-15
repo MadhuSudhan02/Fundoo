@@ -34,6 +34,7 @@ import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 
@@ -65,7 +66,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,
     ReactiveFormsModule,MatPseudoCheckboxModule,MatCheckboxModule,HttpClientModule,
-    MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,FormsModule
+    MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,FormsModule,MatMenuModule
 
   ],
   providers: [],
