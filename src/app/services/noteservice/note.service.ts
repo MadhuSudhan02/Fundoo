@@ -47,13 +47,14 @@ token :any
   }
 
   noteTrashService(data :any) {
+    this.token=localStorage.getItem('token')
     let requestHeaderOption = {
       headers : new HttpHeaders ({
         "content-type" : 'application/json' ,
         "authorization" : this.token ,
       })
     }
-    return this.httpService.PostService('notes/trashNotes',data,true,requestHeaderOption)
+    return this.httpService.GetService('notes/getTrashNotesList',true,requestHeaderOption)
 
   }
 }
