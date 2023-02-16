@@ -16,9 +16,9 @@ export class IconComponent {
       noteIdList : this.noteObject.id ,
       isDeleted : true 
     }
-    this.noteService.noteTrashService(data).subscribe((data:any)=>{
-      console.log(data) ;
-    })
+    // this.noteService.noteTrashService().subscribe((data:any)=>{
+    //   console.log(data) ;
+    // })
   }
 
 }

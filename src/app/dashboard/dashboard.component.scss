@@ -1,43 +1,42 @@
 .example-container {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
-  
-  .example-is-mobile .example-toolbar {
-    position: fixed;
-    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-    z-index: 2;
-  }
-  
-  h1.example-app-name {
-    margin-left: 8px;
-  }
-  
-  .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-  }
-  
-  .example-is-mobile .example-sidenav-container {
-    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+  flex: 1;
+}
+
+.example-is-mobile .example-sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
-    flex: 1 0 auto;
-  }
-  mat-nav-list {
-    width: 300px;
-  }
-  .nav-icon {
-    margin : 0px 24px 0px 16px ;
-    padding-top: 12px;
-    text-align: center;
-  }
+  flex: 1 0 auto;
+}
+mat-nav-list {
+  width: 300px;
+}
+.nav-icon {
+  margin: 0px 24px 0px 16px;
+  padding-top: 12px;
+  text-align: center;
+}
 .icon-right {
   // background-color: pink;
   width: 20%;
@@ -46,20 +45,53 @@
   flex-flow: row wrap;
   justify-content: space-between;
 }
-.icon-one img{
-margin: 12px;
-}
-.icon-two img{
+.icon-one img {
   margin: 12px;
-  }
-  .fundoo-icon{
-    display: flex;
+}
+.icon-two img {
+  margin: 12px;
+}
+.fundoo-icon {
+  display: flex;
   flex-flow: row wrap;
-    // margin: 10px;
-    // border: 2px solid black;
-  }
-  // .nav-icon-tool{
-  //   margin-top: 10px;
-  // }
+  // margin: 10px;
+  // border: 2px solid black;
+}
+// .nav-icon-tool{
+//   margin-top: 10px;
+// }
+.a {
+  position: relative;
+  bottom: 7px;
+}
+.nav-icon-tool {
+  position: relative;
+  top: 10px;
+}
+.search {
+  width: 700px;
+  margin: 30px 0px 10px 70px;
+  border-radius: 16px;
+}
 
-  
+@media only screen and (max-width: 60%) {
+  .search {
+    width: 400px;
+  }
+  .icon-right {
+    // background-color: pink;
+    width: 20%;
+    // margin-left: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .icon-one{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .icon-two{
+    display: flex;
+    flex-flow: row wrap;
+  }
+}

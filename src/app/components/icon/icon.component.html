@@ -8,9 +8,9 @@
     </div>
     <div class="palete">
         <div class="img">
-            <button mat-button [matMenuTriggerFor]="menu"><img width="16px" height="16px"
-                    src="../../../assets/Icons/pellete.svg" alt=" "></button>
-            <mat-menu #menu="matMenu" id="1">
+            <img [matMenuTriggerFor]="menu1" width="16px" height="16px"
+                    src="../../../assets/Icons/pellete.svg" alt=" ">
+            <mat-menu #menu1="matMenu">
                 <button mat-menu-item class="round-button"></button>
                 <button mat-menu-item class="round-button"></button>
                 <button mat-menu-item class="round-button"></button>
@@ -33,9 +33,10 @@
     </div>
 
     <div class="img">
-        <button mat-button [matMenuTriggerFor]="menu"><img width="16px" height="16px"
-                src="../../../assets/Icons/threedot.svg" alt=" "></button>
-        <mat-menu #menu="matMenu" id="2">
+       <img [matMenuTriggerFor]="menu" width="16px" height="16px"
+                src="../../../assets/Icons/threedot.svg" alt=" ">
+        <mat-menu #menu="matMenu">
+            
             <button mat-menu-item>Delete note</button>
             <button mat-menu-item>Add label</button>
             <button mat-menu-item>Add drawing</button>

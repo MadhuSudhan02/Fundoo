@@ -46,7 +46,7 @@ token :any
 
   }
 
-  noteTrashService(data :any) {
+  noteTrashService() {
     this.token=localStorage.getItem('token')
     let requestHeaderOption = {
       headers : new HttpHeaders ({
