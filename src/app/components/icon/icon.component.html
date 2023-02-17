@@ -37,7 +37,7 @@
                 src="../../../assets/Icons/threedot.svg" alt=" ">
         <mat-menu #menu="matMenu">
             
-            <button mat-menu-item>Delete note</button>
+            <button mat-menu-item (click)="trashNote()"><span>Delete note</span> </button>
             <button mat-menu-item>Add label</button>
             <button mat-menu-item>Add drawing</button>
             <button mat-menu-item>Make a copy</button>

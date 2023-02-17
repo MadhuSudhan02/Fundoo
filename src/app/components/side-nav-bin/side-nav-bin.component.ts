@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
 })
 export class SideNavBinComponent implements OnInit {
   // @Input() noteObject : any ;
+  notesArray:any =[] ;
   constructor(private noteService : NoteService) {}
 
   ngOnInit(): void {
@@ -21,8 +22,13 @@ export class SideNavBinComponent implements OnInit {
     //   noteIdList : this.noteObject.id ,
     //   isDeleted : true 
     // }
-    this.noteService.noteTrashService().subscribe((data:any)=>{
+    this.noteService.getAllNotesService().subscribe((data:any)=>{
       console.log(data) ;
+      this.notesArray =data.data ;
+      this.notesArray =this.notesArray.filter((filterdata :any) =>{
+        return filterdata.isDeleted=== true;
+      })
+      console.log("getting trash note" ,this.notesArray)
     })
   }
 
