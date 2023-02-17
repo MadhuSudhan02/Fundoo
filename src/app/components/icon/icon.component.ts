@@ -30,12 +30,22 @@ export class IconComponent {
       noteIdList : [this.noteObject.id ],
       isArchived : true
     }
-    // achieveNoteService
     console.log("getting noteId",req.noteIdList) 
     this.noteService.archieveNoteService(req).subscribe((res:any)=>{
       console.log("notes moved to acheive nav",res) ;
       
     })
+
+  }
+  colorPalete() {
+    console.log("i am color") 
+    let req = {
+      
+    }
+    this.noteService.colorService(req).subscribe((res:any)=>{
+      console.log("calling color api ", res)
+    })
+
   }
 
 }

@@ -76,7 +76,6 @@ token :any
       "content-type" : 'application/json' ,
       "authorization" : this.token 
     }
-    // notes/getArchiveNotesList
     return this.httpService.GetService('notes/getArchiveNotesList',true,requestHeaderOption) ;
     
   }
@@ -86,9 +85,16 @@ token :any
       "content-type" : 'appliction/json' ,
       "authorization" : this.token
     }
-    // notes/archiveNotes
     return this.httpService.PostService('notes/archiveNotes',data,true,requestHeaderOption)
+  }
 
+  colorService(data:any){
+    this.token = localStorage.getItem('token') ;
+    let requestHeaderOption = {
+      "content-type" : 'application/json' ,
+      "authorization" : this.token
+    }
+    return this.httpService.PostService('notes/changesColorNotes',data,true,requestHeaderOption) ;
 
   }
 
