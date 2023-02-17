@@ -12,25 +12,22 @@ export class SideNavBinComponent implements OnInit {
   constructor(private noteService : NoteService) {}
 
   ngOnInit(): void {
-    this.trashNote();
+    this.trashNoteList();
   }
 
-  trashNote(){
+  trashNoteList(){
     console.log("trash note ")
-    // console.log(this.noteObject.id) ;
-    // let data = {
-    //   noteIdList : this.noteObject.id ,
-    //   isDeleted : true 
-    // }
-    this.noteService.getAllNotesService().subscribe((data:any)=>{
-      console.log(data) ;
-      this.notesArray =data.data ;
-      this.notesArray =this.notesArray.filter((filterdata :any) =>{
-        return filterdata.isDeleted=== true;
-      })
+
+    this.noteService.noteTrashListService().subscribe((result:any)=>{
+      console.log(result) ;
+      this.notesArray =result.data.data ;
+      // this.notesArray =this.notesArray.filter((filterdata :any) =>{
+      //   return filterdata.isDeleted=== true;
+      // })
       console.log("getting trash note" ,this.notesArray)
     })
   }
 
+  
 }
 

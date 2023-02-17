@@ -38,7 +38,6 @@ mat-nav-list {
   text-align: center;
 }
 .icon-right {
-  // background-color: pink;
   width: 20%;
   margin-left: 100px;
   display: flex;
@@ -74,24 +73,22 @@ mat-nav-list {
   border-radius: 16px;
 }
 
-@media only screen and (max-width: 60%) {
+@media only screen and (max-width: 784px) {
   .search {
     width: 400px;
   }
   .icon-right {
     // background-color: pink;
-    width: 20%;
+    width: 40%;
     // margin-left: 100px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  .icon-one{
-    display: flex;
-    flex-flow: row wrap;
+  .icon-one img {
+    margin: 2px;
   }
-  .icon-two{
-    display: flex;
-    flex-flow: row wrap;
+  .icon-two img {
+    margin: 2px;
   }
 }

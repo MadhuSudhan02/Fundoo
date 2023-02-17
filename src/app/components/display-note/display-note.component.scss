@@ -21,6 +21,11 @@
     align-items: flex-end;
     // background-color: aqua;
     height: 60px;
-
-
+    visibility: hidden;
 }
+.icon-display {
+    visibility: hidden;
+  }
+  .container:hover .icon-display {
+    visibility: visible;
+  }
