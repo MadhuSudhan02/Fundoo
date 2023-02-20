@@ -55,10 +55,12 @@
 }
 .image {
   margin-top: 10px;
+  
 }
 
 .mat-display-4 {
   margin-top: 6px;
+  
   font-size: 24px;
 }
 .mat-display-3 {
@@ -95,11 +97,13 @@
   justify-content: space-between;
 }
 .checkbox {
+  
+  // background-color: aqua;
   position: relative;
+  
   bottom: 20px;
 }
 .email mat-hint {
-  // background-color: aqua;
   width: 100%;
 }
 .bottom {
@@ -110,6 +114,7 @@
   justify-content: space-between;
 }
 .bottom h2 {
+
   color: blue;
   font-size: 12px;
   font-weight: 300;

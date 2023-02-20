@@ -40,7 +40,8 @@ export class IconComponent {
   colorPalete() {
     console.log("i am color") 
     let req = {
-      
+      color: '#fff',
+      noteIdList: [this.noteObject.id],
     }
     this.noteService.colorService(req).subscribe((res:any)=>{
       console.log("calling color api ", res)

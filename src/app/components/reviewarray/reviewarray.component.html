@@ -1,0 +1,15 @@
+<p>Employee list</p>
+<div style="width: 200px; height: 100px;">
+    <div style="border: 1px solid black; margin: 4px;;" *ngFor="let list of arr">
+        {{list}}
+    </div>
+
+    <div style="padding: 20px;" class="input">
+        <input type="text" [(ngModel)]="result">
+    </div>
+    <button (click)="value()">check</button>
+    
+    <span>{{found}}  {{val}}  </span>
+    
+   
+</div>

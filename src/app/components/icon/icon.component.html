@@ -6,16 +6,13 @@
     <div class="img">
         <img width="16px" height="16px" src="../../../assets/Icons/person.svg" alt=" ">
     </div>
-    <div (click)="colorPalete()" class="palete">
+    <div class="palete">
         <div class="img">
             <img [matMenuTriggerFor]="menu1" width="16px" height="16px"
                     src="../../../assets/Icons/pellete.svg" alt=" ">
             <mat-menu #menu1="matMenu">
-                <button mat-menu-item class="round-button"></button>
-                <button mat-menu-item class="round-button"></button>
-                <button mat-menu-item class="round-button"></button>
-                <button mat-menu-item class="round-button"></button>
-                <button mat-menu-item class="round-button"></button>
+                <button mat-menu-item  (click)="colorPalete()" class="round-button"></button>
+
             </mat-menu>
             <!-- <img width="16px" height="16px" src="../../../assets/Icons/pellete.svg" alt=" "> -->
 

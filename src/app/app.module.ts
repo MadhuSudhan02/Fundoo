@@ -35,6 +35,7 @@ import { ChildComponent } from './components/child/child.component';
 import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
+import { ReviewarrayComponent } from './components/reviewarray/reviewarray.component';
 
 
 
@@ -60,6 +61,7 @@ import {MatMenuModule} from '@angular/material/menu';
     ParentComponent,
     ChildComponent,
     UpdatenoteComponent,
+    ReviewarrayComponent,
   ],
   imports: [
     BrowserModule,MatDialogModule,

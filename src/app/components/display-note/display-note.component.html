@@ -1,13 +1,20 @@
 <div class="parent">
     <div class="container" *ngFor="let note of childArray">
-        <div (click)="updateNote(note)">
-            {{note.title}}
+        <div style="display:flex ; flex-flow:row wrap; justify-content: space-between;" (click)="updateNote(note)">
+            <div>
+                {{note.title}}
+            </div>
+            <div class="pin">
+                <img width="24px" height="24px" src="../../../assets/Icons/pin.svg" alt="">
+            </div>
+
         </div>
+        
         <div (click)="updateNote(note)">
             {{note.description}}
         </div>
         <div class="icon-display">
-            <div style="width: 240px;" >
+            <div style="width: 240px;">
                 <app-icon [noteObject]="note"></app-icon>
             </div>
 

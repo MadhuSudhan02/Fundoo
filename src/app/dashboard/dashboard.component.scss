@@ -29,11 +29,15 @@ h1.example-app-name {
        `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
 }
+.example-toolbar {
+  border-bottom: 1px solid  rgba(87, 87, 87, 0.219);
+}
 mat-nav-list {
   width: 300px;
+  border: 1px solid  rgba(87, 87, 87, 0.219)  ;
 }
 .nav-icon {
-  margin: 0px 24px 0px 16px;
+  margin: 0px 24px 0px 8px;
   padding-top: 12px;
   text-align: center;
 }
@@ -53,12 +57,8 @@ mat-nav-list {
 .fundoo-icon {
   display: flex;
   flex-flow: row wrap;
-  // margin: 10px;
-  // border: 2px solid black;
 }
-// .nav-icon-tool{
-//   margin-top: 10px;
-// }
+
 .a {
   position: relative;
   bottom: 7px;
@@ -68,9 +68,14 @@ mat-nav-list {
   top: 10px;
 }
 .search {
+  // background-color: aqua;
   width: 700px;
   margin: 30px 0px 10px 70px;
   border-radius: 16px;
+}
+.font {
+  font-size: larger;
+  color: rgb(87, 87, 87) ;
 }
 
 @media only screen and (max-width: 784px) {

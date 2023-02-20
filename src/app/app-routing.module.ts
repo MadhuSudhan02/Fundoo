@@ -13,10 +13,12 @@ import { SideNavEditlabelComponent } from "./components/side-nav-editlabel/side-
 import { SideNavRemainderComponent } from "./components/side-nav-remainder/side-nav-remainder.component";
 import { ChildComponent } from "./components/child/child.component";
 import { ParentComponent } from "./components/parent/parent.component";
+import { ReviewarrayComponent } from "./components/reviewarray/reviewarray.component";
 
 
 const routes: Routes = [
   { path: "", redirectTo: "Login", pathMatch: "full" },
+  {path : "review" , component: ReviewarrayComponent},
   { path: "userSignup", component: RegistrationformComponent },
   { path: "Login", component: SigninComponent },
   { path: "forgotpassword", component: ForgotpasswordComponent },

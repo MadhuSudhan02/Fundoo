@@ -5,7 +5,7 @@
     margin: 8px;
     border-radius: 7px;
     padding: 10px;
-    border: 1px solid rgba(0,0,0,.2); ; 
+    border: 1px solid rgba(0,0,0,.2); 
     // border: 1px solid #8a8a8a ;
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
 
@@ -14,18 +14,25 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin-top: 20px;
 }
 .icon-display {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
     // background-color: aqua;
-    height: 60px;
+    height: 40px;
     visibility: hidden;
 }
 .icon-display {
     visibility: hidden;
   }
   .container:hover .icon-display {
+    visibility: visible;
+  }
+  .container .pin {
+    visibility: hidden;
+  }
+  .container :hover .pin {
     visibility: visible;
   }
