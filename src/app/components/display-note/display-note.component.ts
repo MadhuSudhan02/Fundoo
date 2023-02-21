@@ -1,6 +1,7 @@
 import { Component,OnInit, Input ,Inject } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
+import { DataService } from 'src/app/services/DataService/data.service';
 
 @Component({
   selector: 'app-display-note',
@@ -10,9 +11,15 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 
 export class DisplayNoteComponent implements OnInit {
   @Input() childArray : any ;
-  constructor(public dialog: MatDialog){}
+  searchValue : any ;
+  constructor(public dialog: MatDialog ,private dataService : DataService){}
 
   ngOnInit(): void {
+    this.dataService.currentMessage.subscribe((res :any) => {
+      console.log(res)
+      this.searchValue=res
+    })
+     
     
   }
   updateNote(noteObject : any) {

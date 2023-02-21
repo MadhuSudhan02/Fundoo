@@ -36,6 +36,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { ReviewarrayComponent } from './components/reviewarray/reviewarray.component';
+import { SearchfilterPipe } from './components/Pipe/searchfilter.pipe';
 
 
 
@@ -62,6 +63,7 @@ import { ReviewarrayComponent } from './components/reviewarray/reviewarray.compo
     ChildComponent,
     UpdatenoteComponent,
     ReviewarrayComponent,
+    SearchfilterPipe,
   ],
   imports: [
     BrowserModule,MatDialogModule,

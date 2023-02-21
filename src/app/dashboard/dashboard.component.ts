@@ -1,5 +1,7 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
+import { DataService } from '../services/DataService/data.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +10,8 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 })
 export class DashboardComponent {
   mobileQuery: MediaQueryList;
+  message :any ;
+  subscription :any ;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -23,7 +27,7 @@ export class DashboardComponent {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher , private dataService : DataService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -31,11 +35,16 @@ export class DashboardComponent {
 
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.subscription = this.dataService.currentMessage.subscribe(message => this.message = message)
   }
 
   shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   
-  searchTerm() {
+  searchNote(e : any) {
+    console.log(e.target.value) ;
+
+    let searchText = e.target.value ;
+    this.dataService.changeMessage(searchText) 
 
   }
 }
