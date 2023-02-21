@@ -21,9 +21,9 @@ export class SideNavBinComponent implements OnInit {
     this.noteService.noteTrashListService().subscribe((result:any)=>{
       console.log(result) ;
       this.notesArray =result.data.data ;
-      // this.notesArray =this.notesArray.filter((filterdata :any) =>{
-      //   return filterdata.isDeleted=== true;
-      // })
+      this.notesArray =this.notesArray.filter((filterdata :any) =>{
+        return filterdata.isDeleted=== true && filterdata.isArchived===false ;
+      })
       console.log("getting trash note" ,this.notesArray)
     })
   }

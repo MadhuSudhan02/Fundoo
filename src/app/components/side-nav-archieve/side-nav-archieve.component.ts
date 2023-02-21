@@ -11,7 +11,7 @@ export class SideNavArchieveComponent implements OnInit {
   constructor(private noteService : NoteService){}
 
   ngOnInit(): void {
-    this.archieveNote
+    this.archieveNote()
     
   }
 
@@ -21,6 +21,9 @@ export class SideNavArchieveComponent implements OnInit {
     this.noteService.archieveNoteListService().subscribe((res:any) => {
       console.log(res) ;
       this.notesArray =res.data.data ;
+      this.notesArray =this.notesArray.filter((filterdata :any) =>{
+        return filterdata.isDeleted=== false && filterdata.isArchived===true ;
+      })
       console.log("getting archieve notes")
     })
 

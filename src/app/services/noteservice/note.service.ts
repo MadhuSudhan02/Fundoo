@@ -90,8 +90,10 @@ export class NoteService {
   archieveNoteListService() {
     this.token = localStorage.getItem('token');
     let requestHeaderOption = {
-      'content-type': 'application/json',
-      authorization: this.token,
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        authorization: this.token,
+      }),
     };
     return this.httpService.GetService(
       'notes/getArchiveNotesList',
@@ -102,8 +104,10 @@ export class NoteService {
   archieveNoteService(data: any) {
     this.token = localStorage.getItem('token');
     let requestHeaderOption = {
-      'content-type': 'appliction/json',
-      authorization: this.token,
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        authorization: this.token,
+      }),
     };
     return this.httpService.PostService(
       'notes/archiveNotes',
@@ -116,8 +120,10 @@ export class NoteService {
   colorService(data: any) {
     this.token = localStorage.getItem('token');
     let requestHeaderOption = {
-      'content-type': 'application/json',
-      authorization: this.token,
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        authorization: this.token,
+      }),
     };
     return this.httpService.PostService(
       'notes/changesColorNotes',
