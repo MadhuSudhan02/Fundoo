@@ -1,7 +1,8 @@
-import { Component,OnInit, Input ,Inject } from '@angular/core';
+import { Component,OnInit, Input ,Inject, Output ,EventEmitter } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 import { DataService } from 'src/app/services/DataService/data.service';
+import { }
 
 @Component({
   selector: 'app-display-note',
@@ -11,7 +12,10 @@ import { DataService } from 'src/app/services/DataService/data.service';
 
 export class DisplayNoteComponent implements OnInit {
   @Input() childArray : any ;
+  @Output() messageDisplayToGetallnote = new EventEmitter<string>();
+
   searchValue : any ;
+  msg: any;
   constructor(public dialog: MatDialog ,private dataService : DataService){}
 
   ngOnInit(): void {
@@ -32,6 +36,14 @@ export class DisplayNoteComponent implements OnInit {
       console.log('The dialog was closed');
       // this.animal = result;
     });
+  }
+  recieveMessageFromTrash($event : any){
+    console.log("event from icon to display" , $event)
+    this.msg = $event ;
+    console.log("msg" , this.msg) ;
+
+    this.messageDisplayToGetallnote.emit(this.msg)
+
   }
   }
 

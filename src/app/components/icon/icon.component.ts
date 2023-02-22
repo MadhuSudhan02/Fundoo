@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NoteService } from 'src/app/services/noteservice/note.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
 })
 export class IconComponent {
   @Input() noteObject : any ;
+  @Output() messageEvent = new EventEmitter<string>();
   noteIdList:any ;
   isDeleted: any ;
   isArchived :any ;
@@ -32,6 +33,7 @@ export class IconComponent {
     console.log("getting noteID",req.noteIdList)
     this.noteService.noteTrashService(req).subscribe((data:any)=>{
       console.log("notes moved to bin" ,data)
+      this.messageEvent.emit(data)
     })
   }
   archieve() {

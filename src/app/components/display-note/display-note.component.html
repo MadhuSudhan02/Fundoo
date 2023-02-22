@@ -15,7 +15,7 @@
         </div>
         <div class="icon-display">
             <div style="width: 240px;">
-                <app-icon [noteObject]="note"></app-icon>
+                <app-icon [noteObject]="note" (messageEvent)="recieveMessageFromTrash($event)"></app-icon>
             </div>
 
         </div>

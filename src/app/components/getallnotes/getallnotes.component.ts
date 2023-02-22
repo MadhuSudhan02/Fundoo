@@ -8,7 +8,9 @@ NoteService
   styleUrls: ['./getallnotes.component.scss']
 })
 export class GetallnotesComponent implements OnInit {
+
   arrayNoteList = [] ;
+  message : any ;
   constructor(private noteService : NoteService) {}
 
   ngOnInit() {
@@ -41,4 +43,14 @@ export class GetallnotesComponent implements OnInit {
       this.getallnotes() ;
     }
 
-}
+    receiveMessage($event : any) {
+      this.message = $event
+    }
+
+  recieveMessageFromDisplay($event : any) {
+    this.getallnotes() ;
+
+  }
+  }
+
+
