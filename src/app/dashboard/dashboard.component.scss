@@ -78,7 +78,7 @@ mat-nav-list {
   color: rgb(87, 87, 87) ;
 }
 
-@media only screen and (max-width: 784px) {
+@media only screen and (min-width: 360px) {
   .search {
     width: 400px;
   }
@@ -98,6 +98,6 @@ mat-nav-list {
   }
 }
 
-@media only screen and (max-width: 784px) {
+// @media only screen and (max-width: 784px) {
   
-}
+// }

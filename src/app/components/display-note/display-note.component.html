@@ -1,5 +1,5 @@
 <div class="parent">
-    <div class="container" *ngFor="let note of childArray | searchfilter : searchValue ">
+    <div [style.background-color]="note.color" class="container" *ngFor="let note of childArray | searchfilter : searchValue ">
         <div style="display:flex ; flex-flow:row wrap; justify-content: space-between;" (click)="updateNote(note)">
             <div>
                 {{note.title}}

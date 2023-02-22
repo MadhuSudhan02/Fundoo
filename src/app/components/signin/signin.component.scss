@@ -1,86 +1,165 @@
-.parent-container{
-    // background-color: black;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.parent-container {
+  // background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container {
-    background-color: white;
-    border: solid 1px gray;
-    width: 32%;
-    height: 84%;
-    border-radius: 12px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  background-color: white;
+  border: solid 1px gray;
+  width: 32%;
+  height: 84%;
+  border-radius: 12px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
-.child-container{
-    width: 80%;
-    display: flex;
-    flex-flow: column wrap;
+.child-container {
+  width: 80%;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .img-header {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .headline {
-    width: 100%;
-    
-    text-align: center;
+  width: 100%;
+
+  text-align: center;
 }
 .mat-display-4 {
-    font-size: 24px;
-    margin-top: 2px;
+  font-size: 24px;
+  margin-top: 2px;
 }
-   
+
 .mat-display-2 {
-    margin-top: 14px;
+  margin-top: 14px;
 }
 .email-password {
-    margin-top: 30px;
-     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between ;
-
-
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
 }
 .danger {
-    color: red;
+  color: red;
 }
 .forgot {
-// margin-top:auto ;    
-position: relative;
-bottom: 16px;
+  // margin-top:auto ;
+  position: relative;
+  bottom: 16px;
 }
-.forgot h2{
-    color: blue ;
-    font-size: 12px;
-    font-weight: 300;
+.forgot h2 {
+  color: blue;
+  font-size: 12px;
+  font-weight: 300;
 }
-.bottom-header{
-    margin-top: 30px;
+.bottom-header {
+  margin-top: 30px;
 }
-.mat-display-1{
-     color: blue ;
-
+.mat-display-1 {
+  color: blue;
 }
 
 .bottom {
-    // background-color: pink;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between ;
-    margin-top : 20px;
-   
+  // background-color: pink;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 .bottom h2 {
-    color: blue;
-    font-size: 12px;
+  color: blue;
+  font-size: 12px;
+  font-weight: 300;
+}
+@media screen and (min-width: 375px) {
+  .sub-container-2 {
+    display: none;
+  }
+  .container {
+    border: none;
+    // background-color: aqua;
+    height: fit-content;
+    width: fit-content;
+
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .parent-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .child-container {
+    // background-color: pink;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    // margin: 5px 0px 0px 20px;
+  }
+  .sub-container-1 {
+    // width: 60%;
+    // background-color: blue;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+  }
+.email-password{
+    // background-color: aqua;
+    display: flex;
+    flex-flow: column wrap;
+    // justify-content: space-between;
+}
+  .mat-display-2 {
+    width: 60%;
+    font-size: 16px;
     font-weight: 300;
+    text-align: center;
+    margin-bottom: 200px;
+  }
+  .mat-display-4 {
+    margin-top: 6px;
+
+    font-size: 12px;
+  }
+  .mat-display-3 {
+    margin-top: 6px;
+  }
+  .bottom {
+    width: 100%;
+    // background-color:  grey;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .img-header {
+    // background-color: blue;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .headline {
+    // background-color: gray;
+    height: 100px ;
+  
+    text-align: center;
+  }
 }

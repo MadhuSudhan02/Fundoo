@@ -15,7 +15,8 @@
                         <mat-form-field appearance="outline">
                             <mat-label>First name</mat-label>
                             <input formControlName="firstName" matInput>
-                            <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                            <mat-hint class="danger"
+                                *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
                                 first name is required
                             </mat-hint>
                         </mat-form-field>
@@ -23,7 +24,8 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Last name</mat-label>
                             <input formControlName="lastName" matInput>
-                            <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                            <mat-hint class="danger"
+                                *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
                                 last name is required
                             </mat-hint>
                         </mat-form-field>
@@ -34,7 +36,8 @@
                         <mat-form-field appearance="outline">
                             <mat-label>email</mat-label>
                             <input formControlName="email" matInput>
-                            <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                            <mat-hint class="danger"
+                                *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
                                 email is required
                             </mat-hint>
                             <mat-hint color="primary">you can use letters , numbers &period .</mat-hint>
@@ -46,27 +49,29 @@
                             <mat-form-field appearance="outline">
                                 <mat-label>Password</mat-label>
                                 <input formControlName="password" type="password" matInput>
-                                <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                <mat-hint class="danger"
+                                    *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
                                     password is required
                                 </mat-hint>
                             </mat-form-field>
-    
+
                             <mat-form-field appearance="outline">
                                 <mat-label>Confirm</mat-label>
                                 <input formControlName="confirmPassword" type="password" matInput>
-                                <mat-hint class="danger" *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
+                                <mat-hint class="danger"
+                                    *ngIf="registerForm.get('email')!.touched && registerForm.get('email')!.errors?.['required']">
                                     password is required
                                 </mat-hint>
                             </mat-form-field>
 
                         </div>
-                        
+
                         <div class="password-hint">
                             <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
 
                         </div>
                         <div class="checkbox">
-                            <mat-checkbox >
+                            <mat-checkbox>
                                 Show password
                             </mat-checkbox>
 
@@ -88,9 +93,6 @@
             </div>
 
         </div>
-
-
-
     </div>
 
 </div>

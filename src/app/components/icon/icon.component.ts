@@ -12,6 +12,14 @@ export class IconComponent {
   isDeleted: any ;
   isArchived :any ;
   color : any ;
+
+  colors :Array<any> =[
+    {code :'#fff' , name : 'white'} ,
+    {code :'#f28b82' , name : 'red'} ,
+    {code :'#fbbc04' , name : 'orange'} ,
+    {code :'#FFFF00' , name : 'yellow'} ,
+    {code :'#ccff90' , name : 'green'} ,
+  ] ;
   constructor(private noteService : NoteService) {}
 
   //child to parent using output decorator for all three
@@ -39,10 +47,12 @@ export class IconComponent {
     })
 
   }
-  colorPalete() {
+  colorPalete(color :any) {
     console.log("i am color") 
     let req = {
-      color: ['#fff','#1ecbe1', '#e01f27','#f1f20d','#55aa8e','#6600ff' ,'#e600ff'],
+      color :color ,
+      // color : '#1ecbe1',
+      // color: ['#fff','#1ecbe1', '#e01f27','#f1f20d','#55aa8e','#6600ff' ,'#e600ff'],
       noteIdList: [this.noteObject.id],
     }
     this.noteService.colorService(req).subscribe((res:any)=>{
