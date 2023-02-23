@@ -1,53 +1,79 @@
-<div class="mat-icon">
-    <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/Notification.svg" alt=" ">
-    </div>
-
-    <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/person.svg" alt=" ">
-    </div>
-    <div class="palete">
+<div *ngIf="!isDeleted ; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+    <div class="mat-icon" *ngIf="!isDeleted ; else elseBlock">
         <div class="img">
-            <img  [matMenuTriggerFor]="menu1" width="16px" height="16px"
-                    src="../../../assets/Icons/pellete.svg" alt=" ">
-            <mat-menu #menu1="matMenu">
-                <div class="box">
-                    <div *ngFor="let color of colors" class="color-button">
-                        <button mat-mini-fab [style.background]="color?.code" (click)="colorPalete(color.code)"></button>
-                    </div>
-                </div>
-                <!-- <button (click)="colorPalete()" mat-menu-item   class="round-button"></button> -->
+            <img width="16px" height="16px" src="../../../assets/Icons/Notification.svg" alt=" ">
+        </div>
 
-            </mat-menu>
+        <div class="img" (click)="remainder()">
+            <img width="16px" height="16px" src="../../../assets/Icons/person.svg" alt=" ">
+        </div>
+        <div class="palete">
+            <div class="img">
+                <img [matMenuTriggerFor]="menu1" width="16px" height="16px" src="../../../assets/Icons/pellete.svg"
+                    alt=" ">
+                <mat-menu #menu1="matMenu">
+                    <div class="box">
+                        <div *ngFor="let color of colors" class="color-button">
+                            <button mat-mini-fab [style.background]="color?.code"
+                                (click)="colorPalete(color.code)"></button>
+                        </div>
+                    </div>
+
+                </mat-menu>
+
+            </div>
+        </div>
+
+        <div class="img">
+            <img width="16px" height="16px" src="../../../assets/Icons/image.svg" alt=" ">
 
         </div>
+
+        <div (click)="archieve()" class="img" *ngIf="isArchived ; else elseBlock">
+            <img width="16px" height="16px" src="../../../assets/Icons/systemupdate.svg" alt=" ">
+
+        </div>
+        <ng-template #elseBlock>
+            <div (click)="unArchieve()">
+                <img width="16px" height="16px" src="../../../assets/Icons/unarchive.svg" alt="">
+            </div>
+
+        </ng-template>
+
+
+        <div class="img">
+            <img [matMenuTriggerFor]="menu" width="16px" height="16px" src="../../../assets/Icons/threedot.svg" alt=" ">
+            <mat-menu #menu="matMenu">
+
+                <button mat-menu-item (click)="trashNote()"><span>Delete note</span> </button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show tick boxes</button>
+                <button mat-menu-item>Copy to Google Docs</button>
+            </mat-menu>
+            <!-- <img width="16px" height="16px" src="../../../assets/Icons/threedot.svg" alt=" "> -->
+
+        </div>
+
+
     </div>
 
-    <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/image.svg" alt=" ">
+</ng-template>
+
+<ng-template #elseBlock>
+    <div class="deleted">
+
+        <span><img width="16px" height="16px" src="../../../assets/Icons/DeleteForever.svg" alt=""></span>
+        <span (click)="restoreNote()">
+            <img width="16px" height="16px" src="../../../assets/Icons/Delete.svg" alt="">
+        </span>
 
     </div>
-
-    <div (click)="archieve()" class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/systemupdate.svg" alt=" ">
-
-    </div>
-
-    <div class="img">
-       <img [matMenuTriggerFor]="menu" width="16px" height="16px"
-                src="../../../assets/Icons/threedot.svg" alt=" ">
-        <mat-menu #menu="matMenu">
-            
-            <button mat-menu-item (click)="trashNote()"><span>Delete note</span> </button>
-            <button mat-menu-item>Add label</button>
-            <button mat-menu-item>Add drawing</button>
-            <button mat-menu-item>Make a copy</button>
-            <button mat-menu-item>Show tick boxes</button>
-            <button mat-menu-item>Copy to Google Docs</button>
-        </mat-menu>
-        <!-- <img width="16px" height="16px" src="../../../assets/Icons/threedot.svg" alt=" "> -->
-
-    </div>
+</ng-template>
 
 
-</div>
+
+<!-- <div *ngIf=" ; else elseBlock">Content to render when condition is true.</div>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->

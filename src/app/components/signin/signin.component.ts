@@ -40,6 +40,8 @@ export class SigninComponent implements OnInit {
         // this.route.navigation 
         this.router.navigateByUrl('/home') ;
         localStorage.setItem ('token' , res.id) ;
+        localStorage.setItem ('userId' , res.userId)
+
             }) 
     }
 

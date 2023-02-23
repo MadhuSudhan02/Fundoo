@@ -2,7 +2,7 @@ import { Component,OnInit, Input ,Inject, Output ,EventEmitter } from '@angular/
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 import { DataService } from 'src/app/services/DataService/data.service';
-import { }
+// import { }
 
 @Component({
   selector: 'app-display-note',
@@ -45,5 +45,6 @@ export class DisplayNoteComponent implements OnInit {
     this.messageDisplayToGetallnote.emit(this.msg)
 
   }
-  }
+}
+  
 

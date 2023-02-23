@@ -132,4 +132,34 @@ export class NoteService {
       requestHeaderOption
     );
   }
+
+  remainderService(data: any) {
+    this.token = localStorage.getItem('token');
+    let requestHeaderOption = {
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        authorization: this.token,
+      }),
+    };
+    return this.httpService.PostService(
+      'notes/addUpdateReminderNotes',
+      data,
+      true,
+      requestHeaderOption
+    );
+  }
+
+  RemainderListService() {
+    let requestHeaderOption = {
+      headers: new HttpHeaders({
+        'content-type': 'application/json',
+        authorization: this.token,
+      }),
+    };
+    return this.httpService.GetService(
+      'notes/getReminderNotesList',
+      true,
+      requestHeaderOption
+    );
+  }
 }
