@@ -1,22 +1,32 @@
-import { Component, EventEmitter, Input, Output  } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
 import { NoteService } from 'src/app/services/noteservice/note.service';
-import { Route } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { SideNavBinComponent } from '../side-nav-bin/side-nav-bin.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.scss']
 })
-export class IconComponent {
+export class IconComponent implements OnInit {
   @Input() noteObject : any ;
+  // @Input() isDeleted : any ;
   @Output() messageEvent = new EventEmitter();
 
-
+isDeleted : boolean =false ;
   noteIdList:any ;
-  isDeleted: any ;
+  // isDeleted: any ;
   isArchived :any ;
   color : any ;
-  // comp = this.route.snapshot.component; 
+  // comp = this.route.snapshot.component;
+  date : any ;
+  time :any ;
+  calender :any ;
+  repeat : any ;
+  formControl : any
+
+
 
   colors :Array<any> =[
     {code :'#fff' , name : 'white'} ,
@@ -27,8 +37,18 @@ export class IconComponent {
   ] ;
 
   todayDate: { reminder: any[]; noteIdList: any[]; userId: string | null; } | undefined;
-  constructor(private noteService : NoteService ) {}
 
+  constructor(private noteService : NoteService , private route : ActivatedRoute , private snackBar : MatSnackBar ) {}
+
+
+
+  
+ngOnInit(): void {
+  let comp = this.route.snapshot.component
+  if (comp == SideNavBinComponent)
+  this.isDeleted===true
+
+}
 
   
   //child to parent using output decorator for all three
@@ -42,6 +62,10 @@ export class IconComponent {
     this.noteService.noteTrashService(req).subscribe((data:any)=>{
       console.log("notes moved to bin" ,data)
       this.messageEvent.emit(data) ;
+      this.snackBar.open('trashNote API called','',{
+        duration :3000 ,
+        verticalPosition: 'top'
+      })
     })
   }
 
@@ -55,6 +79,10 @@ export class IconComponent {
     this.noteService.noteTrashService(req).subscribe((data:any)=>{
       console.log("moving notes back bin to display" ,data)
       this.messageEvent.emit(data) ;
+      this.snackBar.open('Restore API called','',{
+        duration :3000 ,
+        verticalPosition: 'top'
+      })
     })
   }
   archieve() {
@@ -67,6 +95,10 @@ export class IconComponent {
     this.noteService.archieveNoteService(req).subscribe((res:any)=>{
       console.log("notes moved to acheive nav",res) ;
       this.messageEvent.emit(res) ;
+      this.snackBar.open('Archive API called','',{
+        duration :3000 ,
+        verticalPosition: 'top'
+      })
       
     })
 
@@ -80,6 +112,10 @@ export class IconComponent {
     this.noteService.colorService(req).subscribe((res:any)=>{
       console.log("calling color api ", res)
       this.messageEvent.emit(res) ;
+      this.snackBar.open('color API called','',{
+        duration :3000 ,
+        verticalPosition: 'top'
+      })
     })
 
   }
@@ -93,7 +129,11 @@ export class IconComponent {
   
     };
     this.noteService.colorService(this.todayDate).subscribe((res:any)=>{
-      console.log("calling remainder api ", res)
+      console.log("calling remainder api ", res) ;
+      this.snackBar.open('remainder API called','',{
+        duration :3000 ,
+        verticalPosition: 'top'
+      })
     })
 
   }
@@ -108,6 +148,10 @@ export class IconComponent {
     this.noteService.archieveNoteService(req).subscribe((res:any)=>{
       console.log("notes moving back to display note",res) ;
       this.messageEvent.emit(res) ;
+      this.snackBar.open('Unarchieve API called','',{
+        duration :3000 ,
+        verticalPosition: 'top'
+      })
       
     })
 

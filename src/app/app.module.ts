@@ -37,6 +37,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { ReviewarrayComponent } from './components/reviewarray/reviewarray.component';
 import { SearchfilterPipe } from './components/Pipe/searchfilter.pipe';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ArrayprintComponent } from './components/arrayprint/arrayprint.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -64,13 +67,15 @@ import { SearchfilterPipe } from './components/Pipe/searchfilter.pipe';
     UpdatenoteComponent,
     ReviewarrayComponent,
     SearchfilterPipe,
+    ArrayprintComponent,
   ],
   imports: [
     BrowserModule,MatDialogModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,
     ReactiveFormsModule,MatPseudoCheckboxModule,MatCheckboxModule,HttpClientModule,
-    MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,FormsModule,MatMenuModule
+    MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,FormsModule,MatMenuModule,
+    MatDatepickerModule,MatSnackBarModule
 
   ],
   providers: [],

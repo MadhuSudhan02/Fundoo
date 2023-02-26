@@ -1,5 +1,6 @@
 <div class="parent">
-    <div [style.background-color]="note.color" class="container" *ngFor="let note of childArray | searchfilter : searchValue ">
+    <div [style.background-color]="note.color" class="container"
+        *ngFor="let note of childArray | searchfilter : searchValue ">
         <div style="display:flex ; flex-flow:row wrap; justify-content: space-between;" (click)="updateNote(note)">
             <div>
                 {{note.title}}
@@ -9,7 +10,7 @@
             </div>
 
         </div>
-        
+
         <div (click)="updateNote(note)">
             {{note.description}}
         </div>

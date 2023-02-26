@@ -7,9 +7,8 @@
    }
 .parent {
     // background-color: aqua;
-    width: 600px;
+    width: 550px;
     height: fit-content;
-    border: 1px solid rgba(0,0,0,.2);
     padding: 10px 20px 10px 20px;
     border-radius: 12px;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302),0 2px 6px 2px rgba(60,64,67,0.149);
@@ -24,16 +23,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
 }
-// ::ng-deep .mat-form-field-appearance-outline.mat-form-field-disabled ,
-// ::ng-deep .mat-form-field-outline
-//  {
-//     opacity: 0;
-//   }
 
-// ::ng-deep .mat-form-field-underline
-// {
-// display: none;
-// }
 .no-border {
     background-color: rgba(255, 255, 255, 0) ;
     margin-bottom: 10px ;

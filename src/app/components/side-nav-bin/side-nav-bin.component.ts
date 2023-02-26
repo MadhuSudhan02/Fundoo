@@ -9,6 +9,7 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
 export class SideNavBinComponent implements OnInit {
   // @Input() noteObject : any ;
   notesArray:any =[] ;
+  isDeleted : boolean =true ;
   constructor(private noteService : NoteService) {}
 
   ngOnInit(): void {

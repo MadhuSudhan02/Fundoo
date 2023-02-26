@@ -23,6 +23,7 @@ export class SideNavRemainderComponent implements OnInit  {
       this.notesArray =result.data.data ;
       this.notesArray =this.notesArray.filter((filterdata :any) =>{
         
+        
         // return filterdata.isDeleted=== true && filterdata.isArchived===false ;
       })
       console.log("getting remainder" ,this.notesArray)

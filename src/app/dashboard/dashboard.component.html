@@ -7,21 +7,21 @@
     </div>
 
     <mat-form-field class="search" appearance="outline">
-      <mat-label>Search</mat-label>
+      <mat-label class="label">Search</mat-label>
       <input (keyup)="searchNote($event)" style=" border: none; outline: none;" matInput />
       <mat-icon matPrefix>search</mat-icon>
     </mat-form-field>
     <div class="icon-right">
-      <div class="icon-one">
+      <span class="icon-one">
         <img width="24px" height="24px" src="../../assets/Icons/refresh.svg" alt="">
         <img width="24px" height="24px" src="../../assets/Icons/twobox.svg" alt="">
         <img width="24px" height="24px" src="../../assets/Icons/setting.svg" alt="">
-      </div>
+      </span>
 
-      <div class="icon-two">
+      <span class="icon-two">
         <img width="24px" height="24px" src="../../assets/Icons/apps.svg" alt="">
         <img width="24px" height="24px" src="../../assets/Icons/account.svg" alt="">
-      </div>
+      </span>
     </div>
 
   </mat-toolbar>

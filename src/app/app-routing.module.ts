@@ -14,11 +14,13 @@ import { SideNavRemainderComponent } from "./components/side-nav-remainder/side-
 import { ChildComponent } from "./components/child/child.component";
 import { ParentComponent } from "./components/parent/parent.component";
 import { ReviewarrayComponent } from "./components/reviewarray/reviewarray.component";
+import { ArrayprintComponent } from "./components/arrayprint/arrayprint.component";
 
 
 const routes: Routes = [
   { path: "", redirectTo: "Login", pathMatch: "full" },
   {path : "review" , component: ReviewarrayComponent},
+  {path : "array" , component: ArrayprintComponent},
   { path: "userSignup", component: RegistrationformComponent },
   { path: "Login", component: SigninComponent },
   { path: "forgotpassword", component: ForgotpasswordComponent },
