@@ -62,4 +62,8 @@ registration(requestData: Iregistration){
     return this.httpService.PostService('user/reset-password', requestData, false, requestHeadersOptions)
 
   }
+
+  loggedIn() {
+    return !!localStorage.getItem('token')
+  }
 }

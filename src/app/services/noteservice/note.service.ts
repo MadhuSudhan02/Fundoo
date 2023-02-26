@@ -5,6 +5,9 @@ import { HttpHeaders } from '@angular/common/http';
   providedIn: 'root',
 })
 export class NoteService {
+  loggedIn() {
+    throw new Error('Method not implemented.');
+  }
   token: any;
   constructor(private httpService: HttpService) {
     this.token = localStorage.getItem('token');

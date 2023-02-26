@@ -62,7 +62,7 @@ ngOnInit(): void {
     this.noteService.noteTrashService(req).subscribe((data:any)=>{
       console.log("notes moved to bin" ,data)
       this.messageEvent.emit(data) ;
-      this.snackBar.open('trashNote API called','',{
+      this.snackBar.open('trashNote API ','called',{
         duration :3000 ,
         verticalPosition: 'top'
       })
@@ -79,7 +79,7 @@ ngOnInit(): void {
     this.noteService.noteTrashService(req).subscribe((data:any)=>{
       console.log("moving notes back bin to display" ,data)
       this.messageEvent.emit(data) ;
-      this.snackBar.open('Restore API called','',{
+      this.snackBar.open('Restore API','called',{
         duration :3000 ,
         verticalPosition: 'top'
       })
@@ -95,7 +95,7 @@ ngOnInit(): void {
     this.noteService.archieveNoteService(req).subscribe((res:any)=>{
       console.log("notes moved to acheive nav",res) ;
       this.messageEvent.emit(res) ;
-      this.snackBar.open('Archive API called','',{
+      this.snackBar.open('Archive API','called',{
         duration :3000 ,
         verticalPosition: 'top'
       })
@@ -112,7 +112,7 @@ ngOnInit(): void {
     this.noteService.colorService(req).subscribe((res:any)=>{
       console.log("calling color api ", res)
       this.messageEvent.emit(res) ;
-      this.snackBar.open('color API called','',{
+      this.snackBar.open('color API','called',{
         duration :3000 ,
         verticalPosition: 'top'
       })
@@ -130,7 +130,7 @@ ngOnInit(): void {
     };
     this.noteService.colorService(this.todayDate).subscribe((res:any)=>{
       console.log("calling remainder api ", res) ;
-      this.snackBar.open('remainder API called','',{
+      this.snackBar.open('remainder API','called',{
         duration :3000 ,
         verticalPosition: 'top'
       })
@@ -148,7 +148,7 @@ ngOnInit(): void {
     this.noteService.archieveNoteService(req).subscribe((res:any)=>{
       console.log("notes moving back to display note",res) ;
       this.messageEvent.emit(res) ;
-      this.snackBar.open('Unarchieve API called','',{
+      this.snackBar.open('Unarchieve API','called',{
         duration :3000 ,
         verticalPosition: 'top'
       })
