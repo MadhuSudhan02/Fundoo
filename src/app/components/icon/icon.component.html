@@ -2,12 +2,28 @@
 
     <div class="img">
 
-        <button> <img width="16px" height="16px" src="../../../assets/Icons/reminder.svg" alt=""></button>
+        <!-- <button> <img width="16px" height="16px" src="../../../assets/Icons/reminder.svg" alt=""></button> -->
+
+        <img [matMenuTriggerFor]="animals" width="16px" height="16px" src="../../../assets/Icons/reminder.svg" alt="">
+        <mat-menu #animals="matMenu">
+            <button mat-menu-item>Remainder :</button>
+            <button mat-menu-item>Later today</button>
+            <button mat-menu-item>Tomorrow</button>
+            <button mat-menu-item>Next week</button>
+            <!-- <button mat-menu-item [matMenuTriggerFor]="date">select date and time</button> -->
+            <button mat-menu-item [matMenuTriggerFor]="date">select date and time</button>
+        </mat-menu>
+
+        <mat-menu #date="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="time">Fishes</button>
+           
+          </mat-menu>
+
     </div>
 
     <div class="img">
 
-        <button> <img width="16px" height="16px" src="../../../assets/Icons/person.svg"></button>
+        <span> <img width="16px" height="16px" src="../../../assets/Icons/person.svg"></span>
 
     </div>
 
@@ -35,30 +51,30 @@
 
     <div class="img">
 
-        <button> <img width="16px" height="16px" src="../../../assets/Icons/img.svg"></button>
+        <span> <img width="16px" height="16px" src="../../../assets/Icons/img.svg"></span>
 
     </div>
 
-    <div class="img" *ngIf="!isArchived">
+    <div class="img" *ngIf="!isArchived" (click)="archieve()">
 
-        <button> <img width="16px" height="16px" src="../../../assets/Icons/systemupdate.svg"></button>
+        <span> <img width="16px" height="16px" src="../../../assets/Icons/systemupdate.svg"></span>
 
     </div>
 
-    <div class="img" *ngIf="isArchived">
+    <div class="img" *ngIf="isArchived" (click)="unArchieve()">
 
-        <button> <img width="16px" height="16px" src="../../../assets/Icons/unarchive.svg"></button>
+        <span> <img width="16px" height="16px" src="../../../assets/Icons/unarchive.svg"></span>
 
     </div>
 
     <div class="img">
 
-        <img mat-button [matMenuTriggerFor]="menu" width="16px" height="16px"
-                src="../../../assets/Icons/threedot.svg" alt="">
+        <img mat-button [matMenuTriggerFor]="menu" width="16px" height="16px" src="../../../assets/Icons/threedot.svg"
+            alt="">
 
         <mat-menu #menu="matMenu">
 
-            <button mat-menu-item >Delete</button>
+            <button mat-menu-item>Delete</button>
 
             <button mat-menu-item>Add label</button>
 
@@ -74,10 +90,9 @@
 
 <div class="img" *ngIf="isDeleted">
 
-    <button> <img width="16px" height="16px" src="../../../assets/Icons/Delete.svg"></button>
+    <span> <img width="16px" height="16px" src="../../../assets/Icons/Delete.svg"></span>
 
-    <button> <img width="16px" height="16px"
-            src="../../../assets/Icons/DeleteForever.svg"></button>
+    <span> <img width="16px" height="16px" src="../../../assets/Icons/DeleteForever.svg"></span>
 
 </div>
 
@@ -155,7 +170,7 @@
 </div> -->
 
 
-
+<!-- karishmask.15999@gmail.com -->
 
 <!-- <div *ngIf=" ; else elseBlock">Content to render when condition is true.</div>
 <ng-template #elseBlock>Content to render when condition is false.</ng-template> -->

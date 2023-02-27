@@ -22,14 +22,16 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    align-items: center;
 }
 
 .no-border {
     background-color: rgba(255, 255, 255, 0) ;
-    margin-bottom: 10px ;
+    margin-bottom: 20px ;
     width: 100%;
     outline: none;
     border: none;
+    font-size: 16px;
 }
 .take-note {
 
@@ -39,5 +41,5 @@
     justify-content: space-between;
 }
 .note-icon img {
-    margin-left: 20px;
+    margin-left: 24px;
 }
