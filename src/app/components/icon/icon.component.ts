@@ -14,17 +14,17 @@ export class IconComponent implements OnInit {
   // @Input() isDeleted : any ;
   @Output() messageEvent = new EventEmitter();
 
+  dateAndTime :Array<any> =[
+    {laterToday :'20:00' , Tomorrow : '8:00' , nextWeek : 'Mon,8:00'} ,
+    
+    
+  ] ;
+
   isDeleted: boolean = false;
   noteIdList: any;
-  // isDeleted: any ;
   isArchived: any;
   color: any;
-  // comp = this.route.snapshot.component;
   date: any;
-  time: any;
-  calender: any;
-  repeat: any;
-  formControl: any;
 
   colors: Array<any> = [
     { code: '#fff', name: 'white' },
@@ -127,7 +127,7 @@ export class IconComponent implements OnInit {
   remainder() {
     console.log('i am color');
     this.todayDate = {
-      reminder: [],
+      reminder: [this.dateAndTime],
       noteIdList: [this.noteObject.id],
       userId: localStorage.getItem('userId'),
     };

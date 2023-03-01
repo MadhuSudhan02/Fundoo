@@ -8,22 +8,22 @@
             alt="">
 
         <mat-menu #menu="matMenu">
-            <div style="width: 300px;">
+            <div style="width: 20vw;">
                 <div style="padding: 20px;">
-                    <div style="display: flex; flex-flow: column; gap: 10px;">
+                    <div *ngFor=" let list of dateAndTime"  style="display: flex; flex-flow: column; gap: 10px;">
 
                         <div>remainder :</div>
-                        <div class="space">
+                        <div (click)="remainder()" class="space">
                             <span>Later today</span>
-                            <span>time</span>
+                            <span>{{list.laterToday}}</span>
                         </div>
-                        <div class="space">
+                        <div (click)="remainder()" class="space">
                             <span>Tomorrow</span>
-                            <span>time</span>
+                            <span>{{list.Tomorrow}}</span>
                         </div>
-                        <div class="space">
+                        <div (click)="remainder()" class="space">
                             <span>Next week </span>
-                            <span>time</span>
+                            <span>{{list.nextWeek}}</span>
                         </div>
 
                         <mat-form-field appearance="fill">
