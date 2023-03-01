@@ -2,12 +2,12 @@
     <div [style.background-color]="note.color" class="container"
         *ngFor="let note of childArray | searchfilter : searchValue ">
         <div style="display:flex ; flex-flow:row wrap; justify-content: space-between;" (click)="updateNote(note)">
-            <div style="font-size: 16px; font-weight: 420;">
+            <span style="font-size: 16px; font-weight: 420;">
                 {{note.title}}
-            </div>
-            <div class="pin">
+            </span>
+            <span class="pin">
                 <img width="24px" height="24px" src="../../../assets/Icons/pin.svg" alt="">
-            </div>
+            </span>
 
         </div>
 
@@ -17,6 +17,7 @@
         <div class="icon-display">
             <div style="width: 240px;">
                 <app-icon [noteObject]="note" (messageEvent)="recieveMessageFromTrash($event)"></app-icon>
+
             </div>
 
         </div>

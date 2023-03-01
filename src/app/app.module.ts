@@ -40,6 +40,9 @@ import { SearchfilterPipe } from './components/Pipe/searchfilter.pipe';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ArrayprintComponent } from './components/arrayprint/arrayprint.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+
 
 
 
@@ -75,7 +78,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,
     ReactiveFormsModule,MatPseudoCheckboxModule,MatCheckboxModule,HttpClientModule,
     MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,FormsModule,MatMenuModule,
-    MatDatepickerModule,MatSnackBarModule
+    MatDatepickerModule,MatSnackBarModule,MatNativeDateModule,MatMomentDateModule
 
   ],
   providers: [],

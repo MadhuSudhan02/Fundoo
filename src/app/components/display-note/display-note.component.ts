@@ -49,6 +49,7 @@ export class DisplayNoteComponent implements OnInit {
     console.log("msg" , this.msg) ;
 
     this.messageDisplayToGetallnote.emit(this.msg) ;
+    
     this.snackBar.open('TrushNote API called','',{
       duration :3000 ,
       verticalPosition: 'top'

@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,EventEmitter,OnInit, Output } from '@angular/core';
 import { NoteService } from 'src/app/services/noteservice/note.service';
 
 @Component({
@@ -7,8 +7,9 @@ import { NoteService } from 'src/app/services/noteservice/note.service';
   styleUrls: ['./side-nav-archieve.component.scss']
 })
 export class SideNavArchieveComponent implements OnInit {
+  // @Output() messageEvent = new EventEmitter();
   notesArray:any =[] ;
-  constructor(private noteService : NoteService){}
+  constructor(private noteService : NoteService ){}
 
   ngOnInit(): void {
     this.archieveNote()
@@ -24,8 +25,14 @@ export class SideNavArchieveComponent implements OnInit {
       this.notesArray =this.notesArray.filter((filterdata :any) =>{
         return filterdata.isDeleted=== false && filterdata.isArchived===true ;
       })
+      // this.messageEvent.emit();
       console.log("getting archieve notes")
     })
+
+  }
+
+  recieveMessageFromTrash($event : any) {
+    this.archieveNote() 
 
   }
 

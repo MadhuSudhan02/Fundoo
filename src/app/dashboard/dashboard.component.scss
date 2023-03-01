@@ -139,8 +139,34 @@ mat-nav-list {
   }
 
 }
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+}
 
 
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .icon-right {
+    position: relative;
+    top: 4px;
+    margin: 40px;
+    width: 200px;
+    // background-color: aqua;
+    justify-content: space-around;
+
+  }
+
+  .icon-one img {
+    margin: 2px;
+  }
+  .icon-two img {
+    margin: 2px;
+  }
+  .search {
+    // background-color: aqua;
+    width: 400px;
+    margin: 30px 0px 10px 70px;
+    border-radius: 16px;
+    border: none;
+  }
 
 }

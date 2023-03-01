@@ -4,20 +4,62 @@
 
         <!-- <button> <img width="16px" height="16px" src="../../../assets/Icons/reminder.svg" alt=""></button> -->
 
-        <img [matMenuTriggerFor]="animals" width="16px" height="16px" src="../../../assets/Icons/reminder.svg" alt="">
-        <mat-menu #animals="matMenu">
-            <button mat-menu-item>Remainder :</button>
-            <button mat-menu-item>Later today</button>
-            <button mat-menu-item>Tomorrow</button>
-            <button mat-menu-item>Next week</button>
-            <!-- <button mat-menu-item [matMenuTriggerFor]="date">select date and time</button> -->
-            <button mat-menu-item [matMenuTriggerFor]="date">select date and time</button>
+        <img mat-button [matMenuTriggerFor]="menu" width="16px" height="16px" src="../../../assets/Icons/reminder.svg"
+            alt="">
+
+        <mat-menu #menu="matMenu">
+            <div style="width: 300px;">
+                <div style="padding: 20px;">
+                    <div style="display: flex; flex-flow: column; gap: 10px;">
+
+                        <div>remainder :</div>
+                        <div class="space">
+                            <span>Later today</span>
+                            <span>time</span>
+                        </div>
+                        <div class="space">
+                            <span>Tomorrow</span>
+                            <span>time</span>
+                        </div>
+                        <div class="space">
+                            <span>Next week </span>
+                            <span>time</span>
+                        </div>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Verbose datepicker</mat-label>
+                            <input matInput [matDatepicker]="dp" [formControl]="date">
+                            <mat-hint>MMMM DD, YYYY</mat-hint>
+                            <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                            <mat-datepicker #dp></mat-datepicker>
+                          </mat-form-field>
+    
+                        <!-- <div class="space">
+                            <span><img width="16px" height="16px" src="../../../assets/Icons/time.svg" alt=""> <span>Set date and time</span></span>
+                        </div>
+                        
+                        <div class="space">
+                            <span><img width="16px" height="16px" src="../../../assets/Icons/date.svg" alt=""> <span>Location</span></span>
+                        </div> -->
+                    </div>
+
+                </div>
+
+            </div>
+
         </mat-menu>
 
-        <mat-menu #date="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="time">Fishes</button>
-           
-          </mat-menu>
+        <!-- <mat-menu  >
+            <mat-form-field appearance="fill">
+                <mat-label>Verbose datepicker</mat-label>
+                <input matInput [matDatepicker]="dp" [formControl]="date">
+                <mat-hint>MMMM DD, YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+                <mat-datepicker #dp></mat-datepicker>
+              </mat-form-field>
+
+        </mat-menu> -->
+
 
     </div>
 
@@ -89,70 +131,9 @@
 </div>
 
 <div class="img" *ngIf="isDeleted">
-
-    <span> <img width="16px" height="16px" src="../../../assets/Icons/Delete.svg"></span>
-
     <span> <img width="16px" height="16px" src="../../../assets/Icons/DeleteForever.svg"></span>
 
-</div>
-
-
-
-
-<!-- <div class="mat-icon" *ngIf="!isDeleted">
-    
-    <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/reminder.svg" alt=" ">
-    </div>
-
-    <div class="img" (click)="remainder()">
-        <img width="16px" height="16px" src="../../../assets/Icons/person.svg" alt=" ">
-    </div>
-    <div class="palete">
-        <div class="img">
-            <img [matMenuTriggerFor]="menu1" width="16px" height="16px" src="../../../assets/Icons/pellete.svg" alt=" ">
-            <mat-menu #menu1="matMenu">
-                <div class="box">
-                    <div *ngFor="let color of colors" class="color-button">
-                        <button mat-mini-fab [style.background]="color?.code"
-                            (click)="colorPalete(color.code)"></button>
-                    </div>
-                </div>
-
-            </mat-menu>
-
-        </div>
-    </div>
-
-    <div class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/image.svg" alt=" ">
-
-    </div>
-
-    <div (click)="archieve()" class="img">
-        <img width="16px" height="16px" src="../../../assets/Icons/systemupdate.svg" alt=" ">
-
-    </div>
-    <div (click)="unArchieve()">
-        <img width="16px" height="16px" src="../../../assets/Icons/unarchive.svg" alt="">
-    </div>
-
-
-
-    <div class="img">
-        <img [matMenuTriggerFor]="menu" width="16px" height="16px" src="../../../assets/Icons/threedot.svg" alt=" ">
-        <mat-menu #menu="matMenu">
-
-            <button mat-menu-item (click)="trashNote()"><span>Delete note</span> </button>
-            <button mat-menu-item>Add label</button>
-            <button mat-menu-item>Add drawing</button>
-            <button mat-menu-item>Make a copy</button>
-            <button mat-menu-item>Show tick boxes</button>
-            <button mat-menu-item>Copy to Google Docs</button>
-        </mat-menu>
-
-
-    </div>
+    <span> <img (click)=restoreNote() width="16px" height="16px" src="../../../assets/Icons/Delete.svg"></span>
 
 
 </div>
@@ -160,17 +141,7 @@
 
 
 
-<div class="deleted" *ngIf="isDeleted">
 
-    <span><img width="16px" height="16px" src="../../../assets/Icons/DeleteForever.svg" alt=""></span>
-    <span (click)="restoreNote()">
-        <img width="16px" height="16px" src="../../../assets/Icons/Delete.svg" alt="">
-    </span>
-
-</div> -->
 
 
 <!-- karishmask.15999@gmail.com -->
-
-<!-- <div *ngIf=" ; else elseBlock">Content to render when condition is true.</div>
-<ng-template #elseBlock>Content to render when condition is false.</ng-template> -->

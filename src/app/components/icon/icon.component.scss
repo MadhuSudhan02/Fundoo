@@ -16,11 +16,16 @@
 
 .box {
   display: flex;
+  width: 600px;
   flex-flow: row wrap;
   gap: 5px;
 }
 .color-button{
   // width: 300px;
   height: 30px;
+}
+.space{
+  display: flex; 
+  justify-content: space-between;
 }
 

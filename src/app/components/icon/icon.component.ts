@@ -32,6 +32,13 @@ export class IconComponent implements OnInit {
     { code: '#fbbc04', name: 'orange' },
     { code: '#FFFF00', name: 'yellow' },
     { code: '#ccff90', name: 'green' },
+    { code: '#a7fffeb', name: 'teal' },
+    { code: '#cbf0f8', name: 'Blue' },
+    { code: '#aecbfa', name: 'darkBlue' },
+    { code: '#d7aefb', name: 'purple' },
+    { code: '#fdcfe8', name: 'pink' },
+    { code: '#e6c9a8', name: 'brown' },
+    { code: '#e8eaed', name: 'grey' },
   ];
 
   todayDate:
@@ -126,6 +133,7 @@ export class IconComponent implements OnInit {
     };
     this.noteService.colorService(this.todayDate).subscribe((res: any) => {
       console.log('calling remainder api ', res);
+      this.messageEvent.emit(res);
       this.snackBar.open('remainder API', 'called', {
         duration: 3000,
         verticalPosition: 'top',
@@ -148,6 +156,10 @@ export class IconComponent implements OnInit {
         verticalPosition: 'top',
       });
     });
+  }
+
+  openDialog(){
+
   }
 
   // this.todayDate = {
