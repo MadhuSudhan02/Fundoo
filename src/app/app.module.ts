@@ -41,7 +41,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { ArrayprintComponent } from './components/arrayprint/arrayprint.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatNativeDateModule } from '@angular/material/core';
-// import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 
 
@@ -78,7 +78,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     BrowserAnimationsModule,MatFormFieldModule,MatButtonModule,MatInputModule,
     ReactiveFormsModule,MatPseudoCheckboxModule,MatCheckboxModule,HttpClientModule,
     MatSidenavModule,MatToolbarModule,MatListModule,MatIconModule,FormsModule,MatMenuModule,
-    MatDatepickerModule,MatSnackBarModule,MatNativeDateModule
+    MatDatepickerModule,MatSnackBarModule,MatNativeDateModule,MatMomentDateModule
 
   ],
   providers: [],

@@ -14,6 +14,9 @@
         <div style="font-size: 18px;" (click)="updateNote(note)">
             {{note.description}}
         </div>
+        <div style="font-size: 18px;" (click)="updateNote(note)">
+            {{note.reminder}}
+        </div>
         <div class="icon-display">
             <div style="width: 240px;">
                 <app-icon [noteObject]="note" (messageEvent)="recieveMessageFromTrash($event)"></app-icon>

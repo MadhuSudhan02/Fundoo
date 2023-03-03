@@ -30,11 +30,11 @@ h1.example-app-name {
   flex: 1 0 auto;
 }
 .example-toolbar {
-  border-bottom: 1px solid  rgba(87, 87, 87, 0.219);
+  border-bottom: 1px solid rgba(87, 87, 87, 0.219);
 }
 .mat-toolbar {
-  background: none; 
-  color: rgba(0,0,0,.87);
+  background: none;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 mat-nav-list {
@@ -78,20 +78,20 @@ mat-nav-list {
   border-radius: 16px;
   border: none;
 }
-.label{
-  position: relative; 
+.label {
+  position: relative;
   bottom: 5px;
 }
 ::ng-deep .mat-drawer-container {
   background-color: #ffffff;
-  color: rgba(0,0,0,.87);
+  color: rgba(0, 0, 0, 0.87);
 }
 ::ng-deep .mat-drawer-side {
   border: none;
 }
 .font {
   font-size: larger;
-  color: rgb(87, 87, 87) ;
+  color: rgb(87, 87, 87);
 }
 ::ng-deep .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper {
   padding-left: 0;
@@ -107,15 +107,32 @@ mat-nav-list {
   border: none;
 }
 ::ng-deep .mat-toolbar[_ngcontent-elh-c154] {
-  background : rgb(0, 0, 0);
- color: rgba(0, 0, 0, 0.87);
+  background: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.87);
 }
 
 ::ng-deep .mat-toolbar[_ngcontent-vdk-c153] {
   background: white;
   color: rgba(0, 0, 0, 0.87);
 }
+::ng-deep .mat-mdc-list-item-interactive::before {
+  background-color: orange;
+  opacity: 1;
+}
 
+::ng-deep .mat-mdc-list-item-interactive {
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+::ng-deep .mat-mdc-list-item-interactive:not(:focus):not(
+    .mdc-list-item--disabled
+  ):hover::before {
+  opacity: 0.2;
+  background-color: gray;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 0%;
+}
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .search {
@@ -128,7 +145,6 @@ mat-nav-list {
     width: 200px;
     // background-color: aqua;
     justify-content: space-around;
-
   }
 
   .icon-one img {
@@ -137,12 +153,9 @@ mat-nav-list {
   .icon-two img {
     margin: 2px;
   }
-
 }
-@media screen and (min-width: 481px) and (max-width: 768px){
-
+@media screen and (min-width: 481px) and (max-width: 768px) {
 }
-
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .icon-right {
@@ -152,7 +165,6 @@ mat-nav-list {
     width: 200px;
     // background-color: aqua;
     justify-content: space-around;
-
   }
 
   .icon-one img {
@@ -168,5 +180,4 @@ mat-nav-list {
     border-radius: 16px;
     border: none;
   }
-
 }
